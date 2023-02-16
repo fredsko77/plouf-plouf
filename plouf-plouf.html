@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Plouf plouf</title>
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" 
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="./plouf-plouf.css">
+    </head>
+    <body>
+        <div class="page-wrapper">
+            <header>
+                <nav class="navbar sticky-top bg-primary navbar-dark">
+                    <div class="container-fluid">
+                        <a 
+                            class="navbar-brand" 
+                            href="#" 
+                            onclick="event.preventDefault();"
+                        >Plouf plouf</a>
+                    </div>
+                </nav>
+            </header>
+            <main class="page-content">
+                <div class="container-fluid container-lg">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 col-auto">
+                            <h1 class="h5 mb-4">Ajoutez plusieurs éléments à tirer au sort, puis cliquez sur "Tirer au sort"..</h1>
+
+                            <form id="addPerson" action="" method="post" onsubmit="addPerson(event);">
+                                <div class="row align-items-start">
+                                    <!-- <label for="name">Ajouter une nouvelle personne</label> -->
+                                    <div class="col-md-10">
+                                        <input 
+                                            type="text" 
+                                            class="form-control" 
+                                            id="name" 
+                                            name="name" 
+                                            value=""
+                                            placeholder="Jean, René, Marcelin ..."
+                                        >
+                                    </div>
+                                    <div class="col-md-1">
+                                        <button 
+                                            type="submit" 
+                                            class="btn btn-info" 
+                                            style="color: var(--bs-white);"
+                                        ><i class="bi bi-plus-lg"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="d-flex justify-content-center my-4">
+                                <button 
+                                    type="button" 
+                                    class="btn btn-danger me-2" 
+                                    id="deleteAllButton" 
+                                    onclick="deleteAllPersons();"
+                                >Tout supprimer</button>
+                                <button 
+                                    type="button"
+                                    class="btn btn-primary" 
+                                    id="tirageAuSort" 
+                                    onclick="tirageAuSort();"
+                                >Tirer au sort</button>
+                            </div>
+                        </div>
+                        <div class="personsContainer" id="personsContainer"></div>
+                    </div>
+
+                </div>
+            </main>
+            <footer class="footer">
+                <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, dolore?</small>
+            </footer>
+        </div>
+
+
+        <script 
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" 
+            crossorigin="anonymous"
+        ></script>
+        <script 
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" 
+            crossorigin="anonymous"
+        ></script>  
+        <script src="./plouf-plouf.js"></script>
+
+        <template id="personTemplate">
+            <div class="person">
+                <span class="person-name"></span>
+                <i class="text-danger bi bi-x-lg"></i>
+            </div>
+        </template>
+    
+    </body>
+</html>
