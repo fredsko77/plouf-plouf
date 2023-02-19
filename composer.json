@@ -1,0 +1,16 @@
+{
+    "name": "fagathe/plouf-plouf",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Frédérick AGATHE",
+            "email": "fagathe77@gmail.com"
+        }
+    ],
+    "require": {}
+}

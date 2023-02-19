@@ -1,18 +1,17 @@
 <?php
 
 // Application default config
-define('APP_ENV', 'dev');
-define('APP_SECRET', 'dzajbkbkfnxsbnfrfjkahzb039RFHG$');
-define('APP_TEMPLATE_DIR', '../templates/');
+define('APP_ENV', 'prod');
+define('APP_SECRET', '');
 define('ERROR_TEMPLATE_DIR', '../templates/errors/');
 
-// Database config
-define('DB_DRIVER', '');
-define('DB_PORT', '');
 
 // HTTP config
-
+define('', '');
 
 // Upload config 
 
 // Routes config
+
+
+require_once('config/init.php');
